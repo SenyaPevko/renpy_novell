@@ -317,7 +317,7 @@ screen navigation():
 
         textbutton _("Загрузить") action ShowMenu("load")
 
-        textbutton _("История") action ShowMenu("gallery")
+        textbutton _("Альбом") action ShowMenu("gallery")
 
         textbutton _("Настройки") action ShowMenu("preferences")
 
@@ -355,6 +355,7 @@ style navigation_button:
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
     xalign 0.5
+
 
 
 ## Экран главного меню #########################################################
@@ -488,7 +489,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
     use navigation
 
     textbutton _("Вернуться"):
-        xoffset 60
+        xoffset 100
         style "return_button"
 
         action Return()
@@ -580,7 +581,7 @@ screen about():
 
 style about_label is gui_label
 style about_label_text is gui_label_text
-style about_text is gui_text
+style about_text is gui_text    
 
 style about_label_text:
     size gui.label_text_size
@@ -648,12 +649,13 @@ screen file_slots(title):
 
                     button:
                         action FileAction(slot)
+                        activate_sound "music/fileaction.wav"
 
                         has vbox
 
                         add FileScreenshot(slot) xalign 0.5
 
-                        text FileTime(slot, format=_("{#file_time}%A, %d %B %Y, %H:%M"), empty=_("Пустой слот")):
+                        text FileTime(slot, format=_("{#file_time}%m/%d/%Y - %H:%M"), empty=_("Пустой слот")):
                             style "slot_time_text"
 
                         text FileSaveName(slot):
@@ -1521,13 +1523,16 @@ style slider_slider:
     variant "small"
     xsize 900
 
+#галерея
 screen gallery():
 
     tag menu
+    predict False
 
     add "gui/game_menu2.jpg"
 
     grid 3 2:
+        
         xfill True
         yfill True
         add g.make_button("ending1", "preview1", xalign = 0.5, yalign = 0.5, hover_border = "images/gallery/hover.png")
@@ -1537,4 +1542,4 @@ screen gallery():
         null
         null
 
-        textbutton "Назад" text_color "#aaaaaa" text_hover_color "#222222" action Return() xalign 0.5 yalign 0.95
+        textbutton "Вернуться" text_color "#aaaaaa" text_hover_color "#222222" action Return() xalign 0.5 yalign 0.95

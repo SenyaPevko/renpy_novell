@@ -2,7 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 274: Indentation mismatch.
+File "game/inti.rpy", line 5: invalid syntax
+    define g.label_text_size = 45
+            ^
+    
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sun Nov 20 18:49:55 2022
+Thu Nov 24 00:51:23 2022

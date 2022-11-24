@@ -30,13 +30,14 @@ define gui.idle_color = '#aaaaaa'
 
 ## Small_color используется в маленьком тексте, который должен быть ярче/темнее,
 ## для того, чтобы выделяться.
-define gui.idle_small_color = '#FEECB6'
+define gui.idle_small_color = '#999999'
 
 ## Цвет, используемых в кнопках и панелях, когда они наведены.
 define gui.hover_color = '#4b4b4b'
 
 ## Цвет для quick_button, меню которое находится снизу во время игры
 define gui.quick_hover_color = '#E0A366'
+define gui.quick_idle_small_color = '#FEECB6'
 
 ## Цвет, используемый текстовой кнопкой, когда она выбрана, но не наведена.
 ## Кнопка может быть выбрана, если это текущий экран или текущее значение
@@ -65,7 +66,7 @@ define gui.text_font = "gui/fonts/BalsamiqSans-Regular.ttf"
 define gui.name_text_font = "gui/fonts/BalsamiqSans-Regular.ttf"
 
 ## Шрифт, используемый текстом вне игры.
-define gui.interface_text_font = "gui/fonts/BalsamiqSans-Regular.ttf"
+define gui.interface_text_font = "gui/fonts/Kiddy Kitty.otf"
 
 ## Размер нормального текста диалога.
 define gui.text_size = 33
@@ -77,7 +78,7 @@ define gui.name_text_size = 45
 define gui.interface_text_size = 36
 
 ## Размер заголовков в пользовательском интерфейсе.
-define gui.label_text_size = 36
+define gui.label_text_size = 45
 
 ## Размер текста на экране уведомлений.
 define gui.notify_text_size = 24
@@ -195,7 +196,7 @@ define gui.page_button_borders = Borders(15, 6, 15, 6)
 
 define gui.quick_button_borders = Borders(10, 3, 10, 0)
 define gui.quick_button_text_size = 35
-define gui.quick_button_text_idle_color = gui.idle_small_color
+define gui.quick_button_text_idle_color = gui.quick_idle_small_color
 define gui.quick_button_text_selected_color = gui.accent_color
 define gui.quick_button_text_hover_color = gui.quick_hover_color
 
@@ -232,11 +233,12 @@ define gui.choice_button_text_insensitive_color = "#444444"
 define gui.slot_button_width = 414
 define gui.slot_button_height = 309
 define gui.slot_button_borders = Borders(15, 15, 15, 15)
-define gui.slot_button_text_size = 21
+define gui.slot_button_text_size = 28
 define gui.slot_button_text_xalign = 0.5
+define gui.slot_button_text_ypos = 50
 define gui.slot_button_text_idle_color = gui.idle_small_color
-define gui.slot_button_text_selected_idle_color = gui.selected_color
-define gui.slot_button_text_selected_hover_color = gui.hover_color
+# define gui.slot_button_text_selected_idle_color = gui.selected_color
+# define gui.slot_button_text_selected_hover_color = gui.hover_color
 
 ## Ширина и высота миниатюры, используемой слотом сохранения.
 define config.thumbnail_width = 384
