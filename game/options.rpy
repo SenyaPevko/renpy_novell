@@ -33,10 +33,10 @@ define gui.about = _p("""
 Эта игра была сделана для {a=https://rtf.urfu.ru/ru/}Урфу ИРИТ-РТФ{/a} в рамках курса ОПД
 \n
 Управление проектом - {a=https://vk.com/kasianov_1}Касьянов Анатолий{/a}\n
-История - {a=}Петров Илья{/a}\n
+История - {a=https://vk.com/gavaryn571}Петров Илья{/a}\n
 Арт - {a=https://vk.com/wh1te_angei}Ивченко Максим{/a}\n
 Разработка - {a=https://vk.com/fusary}Козлов Данил{/a}\n
-Анализ - {a=https://vk.com/fusary}Сизов Владимир{/a}
+Анализ - {a=https://vk.com/togipi13}Сизов Владимир{/a}
 """)
 
 

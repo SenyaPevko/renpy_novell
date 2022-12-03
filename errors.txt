@@ -2,10 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/inti.rpy", line 5: invalid syntax
-    define g.label_text_size = 45
-            ^
-    
+File "game/script.rpy", line 231: expected 'comma or end of line' not found.
+    with fade
+    ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu Nov 24 00:51:23 2022
+Sat Dec  3 17:19:51 2022

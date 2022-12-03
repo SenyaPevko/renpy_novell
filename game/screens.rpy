@@ -162,6 +162,18 @@ style say_dialogue:
 
     adjust_spacing False
 
+style say_thought:
+    properties gui.text_properties("dialogue")
+    
+    color "#B9CCE3"
+    outlines [(2, "#393E46", 0, 0)]
+
+    xpos gui.dialogue_xpos
+    xsize gui.dialogue_width
+    ypos gui.dialogue_ypos
+
+    adjust_spacing False
+
 ## Экран ввода #################################################################
 ##
 ## Этот экран используется, чтобы показывать renpy.input. Это параметр запроса,
@@ -226,6 +238,7 @@ style choice_vbox:
 
 style choice_button is default:
     properties gui.button_properties("choice_button")
+    activate_sound "audio/sounds/menu_button.wav"
 
 style choice_button_text is default:
     properties gui.button_text_properties("choice_button")
