@@ -53,3 +53,6 @@ init:
 
     style slot_time_text:
         line_spacing 30
+
+init python:
+    define.move_transitions("ease", 0.7)

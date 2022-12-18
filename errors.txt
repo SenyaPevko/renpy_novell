@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 231: expected 'comma or end of line' not found.
-    with fade
-    ^
+File "game/screens.rpy", line 1605: 'style' is not a keyword argument or valid child for the screen statement.
+    style say_thought:
+         ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sat Dec  3 17:19:51 2022
+Sat Dec 17 23:36:35 2022

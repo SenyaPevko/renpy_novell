@@ -1,5 +1,4 @@
 ﻿# Определение персонажей игры.
-define a =  Character('Алексей', color="#FEECB6",who_outlines=[ (3, "#592116") ], what_outlines=[ (2, "#393E46") ], what_color="#B9CCE3")
 define m =  Character('Михаил Дмитриевич', color="#FEECB6",who_outlines=[ (3, "#592116") ], what_outlines=[ (2, "#67434d") ], what_color="#e3b9c6")
 
 
@@ -16,6 +15,34 @@ label splashscreen:
 
 # Игра начинается здесь:
 label start:
+
+    $ player_name = ""
+    
+    #выбор имени и цвета
+    jump choose_color
+
+    #создание главного персонажа
+    label define_main_player:
+
+        #проверка имени на корректность
+        python:
+            if player_name == "": 
+                player_name = "Алексей"
+            else:
+                player_name = player_name[0].upper() + player_name[1:]
+            
+            #изменяем текст автора
+            style.say_thought.color = cs.set_color()[0]
+            style.say_thought.outlines = [(2, cs.set_color()[1], 0, 0)]
+            style.rebuild()
+
+        $ player_color = cs.set_color()[0]
+        $ player_outcolor = cs.set_color()[1]
+
+        $ a =  Character("[player_name]", color="#FEECB6",who_outlines=[ (3, "#592116") ], what_outlines=[ (2, player_outcolor) ], what_color= player_color)
+
+        
+
 
     play music wholegame fadeout 2.0 fadein 2.0
 
@@ -104,7 +131,7 @@ label start:
 
     a "Алло?"
 
-    m "Алло? Алексей, ты срочно должен быть в офисе через полтора часа."
+    m "Алло? [player_name], ты срочно должен быть в офисе через полтора часа."
 
     a "Но Михаил Дмитриевич, выходной же. К тому же, что за спешка? Сервера не упали, а сгорели что-ли?"
 
@@ -128,22 +155,16 @@ label start:
 
     menu:
         "Попытаться отказать":
-            jump refused
+            a "А почему я?"
+
+            m "Потому что ты единственный, до кого я смог дозвониться в восемь утра в выходной день."
+
+            "М-да, веская причина."
 
         "Согласиться":
-            jump agreed
-    
-    label refused:
-        a "А почему я?"
+            a "Принимать новичков прямо с утра, жертвуя выходным – отличное начало дня! Ага, ну и бредятина."
 
-        m "Потому что ты единственный, до кого я смог дозвониться в восемь утра в выходной день."
-
-        "М-да, веская причина."
-
-    label agreed:
-        a "Принимать новичков прямо с утра, жертвуя выходным – отличное начало дня! Ага, ну и бредятина."
-
-        m "Вот это настрой! Я думаю ты точно справишься."
+            m "Вот это настрой! Я думаю ты точно справишься."
 
     a "Ладно, понял. А кто эти «зеленые»? Резюме есть?"
 
@@ -199,7 +220,7 @@ label start:
 
         "Меня разбудил звонок. Это был Михаил Дмитриевич."
 
-        m "Алло? Алексей, ты на месте уже?"
+        m "Алло? [player_name], ты на месте уже?"
 
         "Я немного задремал, к счастью, ненадолго."
 
@@ -228,26 +249,30 @@ label start:
         show pavel ordinary:
             xalign 0
             yalign 0
-        with dissolve
+        with easeinleft
 
         show julia ordinary:
             xalign 0.3
             yalign 0
-        with dissolve
+        with easeinleft
 
         show alex ordinary:
             xalign 0.6
             yalign 0
-        with dissolve
+        with easeinright
 
         show stepan ordinary:
             xalign 0.9
             yalign 0
-        with dissolve
+        with easeinright
 
-        "Итак, я позвал «гостей» в переговорку. В комнату вошло четыре человека. Милая девушка лет двадцати, высокий и худощавый парнишка в очках в своеобразном свитере, сбитый молодой человек с волевым подбородком и на изумление элегантно одетый в строгий деловой костюм джентльмен. В его до безобразия блестящих волосах отражалось солнце и слепило остальных ребят."
+        "Итак, я позвал «гостей» в переговорку. В комнату вошло четыре человека. Милая девушка лет двадцати, высокий и худощавый парнишка в очках в своеобразном свитере, сбитый молодой человек с волевым подбородком и... "
+        
+        "на изумление элегантно одетый в строгий деловой костюм джентльмен. В его до безобразия блестящих волосах отражалось солнце и слепило остальных ребят."
 
         "Ну, начнем – подумал я про себя"
+
+        jump second_chapter_end
     
     label stay_in:
 
@@ -266,7 +291,7 @@ label start:
 
         "Как только я полез в карман за телефоном, тут же раздался звонок."
 
-        m "Алло? Алексей, ты на месте уже? Они уже пришли и ждут только тебя! Где тебя черти носят?"
+        m "Алло? [player_name], ты на месте уже? Они уже пришли и ждут только тебя! Где тебя черти носят?"
 
         a "Простите, Михаил Дмитриевич, автобус задержался, и я…"
 
@@ -307,28 +332,57 @@ label start:
         show pavel angry:
             xalign 0
             yalign 0
-        with dissolve
+        with easeinleft
 
         show julia angry:
             xalign 0.3
             yalign 0
-        with dissolve
+        with easeinleft
 
         show alex angry:
             xalign 0.6
             yalign 0
-        with dissolve
+        with easeinright
 
         show stepan angry:
             xalign 0.9
             yalign 0
-        with dissolve
+        with easeinright
 
-        "Милая девушка лет двадцати, высокий и худощавый парнишка в очках в своеобразном свитере, сбитый молодой человек с волевым подбородком и на изумление элегантно одетый в строгий деловой костюм джентльмен. В его до безобразия блестящих волосах отражалось солнце и слепило остальных ребят."
+        "Милая девушка лет двадцати, высокий и худощавый парнишка в очках в своеобразном свитере, сбитый молодой человек с волевым подбородком и на изумление элегантно одетый в строгий деловой костюм джентльмен." 
+        
+        "В его до безобразия блестящих волосах отражалось солнце и слепило остальных ребят."
 
         "Ну, начнем – подумал я про себя"
+        
+        jump second_chapter_end
 
-    #конец второй главы
-    $ persistent.ending2 = True
-
+    label second_chapter_end:
+        #конец второй главы
+        $ persistent.ending2 = True
+    
     return 
+
+label choose_color:
+    python:
+        class SetColor(object):
+            def __init__(self):
+                self.red = 0
+                self.green = 0
+                self.blue = 0
+            
+            def set_color(self):
+                return (Color('#%02x%02x%02x' % (self.red, self.green, self.blue)), Color('#%02x%02x%02x' % (self.red if self.red <120 else self.red - 120, self.green if self.green <120 else self.green - 120, self.blue if self.blue <120 else self.blue - 120)))
+                
+            def screen_loop(self):
+                renpy.show_screen("choose_color_screen")
+                while True:
+                    result = ui.interact()
+                    
+                    if result[0] == "choose_color":
+                        current_color = result[1]
+                    
+                    else: return
+                    
+        cs = SetColor()
+        cs.screen_loop()

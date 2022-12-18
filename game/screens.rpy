@@ -1556,3 +1556,60 @@ screen gallery():
         null
 
         textbutton "Вернуться" text_color "#aaaaaa" text_hover_color "#222222" action Return() xalign 0.5 yalign 0.95
+
+style scrollbar_blue is scrollbar:
+    base_bar Frame("gui/scrollbar/horizontal_blue_bar.png", gui.scrollbar_borders, tile=gui.scrollbar_tile)
+
+style scrollbar_green is scrollbar:
+    base_bar Frame("gui/scrollbar/horizontal_green_bar.png", gui.scrollbar_borders, tile=gui.scrollbar_tile)
+
+style scrollbar_red is scrollbar:
+    base_bar Frame("gui/scrollbar/horizontal_red_bar.png", gui.scrollbar_borders, tile=gui.scrollbar_tile)
+
+#выбор имени и цвета
+screen choose_color_screen:
+
+    add(im.Twocolor(im.Scale("backgrounds/choosing_color.png", 1920, 1080), "#ffffff", "#ffffff"))
+        
+    #text ("{size=-5}RGB Values: Red: %s, Green: %s, Blue: %s !!!"%(cs.red, cs.green, cs.blue)) align(0.5, 0.6)     
+
+    text ("{size=-5}Выберите цвет") align(0.5, 0.43)
+
+    #выбор цвета
+    vbox align(0.5, 0.5):
+
+        bar:
+            xalign 0.5
+            value FieldValue(cs, 'red', 255, max_is_zero=False, style='scrollbar_red', offset=0, step=1)
+            xmaximum 280
+            
+        bar:
+            xalign 0.5
+            value FieldValue(cs, 'green', 255, max_is_zero=False, style='scrollbar_green', offset=0, step=1)
+            xmaximum 280
+            
+        bar:
+            xalign 0.5
+            value FieldValue(cs, 'blue', 255, max_is_zero=False, style='scrollbar_blue', offset=0, step=1)
+            xmaximum 280
+    
+    #ввод имени
+    vbox align(0.5, 0.65):
+        
+        text "Выберите имя":
+            xalign 0.5
+            size 28
+
+        input default "":
+            xalign 0.5
+            size 40
+            pixel_width(400)
+            value VariableInputValue("player_name")
+            color cs.set_color()[0]
+            outlines [(2, cs.set_color()[1], 0, 0)]
+
+    textbutton "Подтвердить" align(0.5, 0.95):
+        action Hide("choose_color_screen"), Jump("define_main_player") 
+        keysym('K_RETURN', 'K_KP_ENTER')
+    
+    
