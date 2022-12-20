@@ -427,7 +427,7 @@ label start:
 
     "Сладостная и нагнетающая тишина провисела еще секунду."
 
-    show julia happy:
+    show julia happy highlight:
         xalign 0.5
     with dissolve
 
@@ -435,17 +435,17 @@ label start:
 
     "Это была та девушка. Внешность была вполне… молодежной? Боже, какой я старый. Крашеные волосы, линзы в глазах, больше чем очки другого паренька, пирсинг в ушах и дизайнерская толстовка. Сквозь линзы виднелся огонек в глазах, а ненавязчивая улыбка, кажется, растопила лёд между всеми в аудитории."
 
-    show julia ordinary
+    show julia ordinary highlight
 
     u "Меня зовут Юлиана, можно просто Юля! Я получила медаль в школе в Волгограде и там же поступила в местный вуз, хорошо отучилась и получила красный диплом… Та-а-ак…Ходила на всякие кружки, мама записывала: рисование, танцы, репетиторы. Вроде три репетитора было."
 
     u "Ну я особо не жаловалась, мама же сказала, что надо ходить, чтобы стать успешной и богатой, я и ходила. Я пыталась все успеть, и вроде как успевала."
 
-    show julia thinking
+    show julia thinking highlight
 
     "Она на секунду опустила взгляд и задумалась, будто прогоняя все сказанное в голове."
 
-    show julia happy
+    show julia happy highlight
 
     u "А, еще я умею играть на губной гармошке, сейчас достану, где же она?.."
 
@@ -455,7 +455,7 @@ label start:
 
     "От Юли прямо веяло, нет, вернее, несло энтузиазмом и оптимизмом. Это будет хорошо влиять на команду. Только вот она какая – то гиперактивная. Наверное, чтобы так не думать, надо самому почаще на улицу выходить дальше продуктового."
 
-    show julia ordinary
+    show julia ordinary highlight
 
     a "Ладно-ладно, хватит, мы поняли. Ох.. Так кем вы себя представляете?"
 
@@ -465,7 +465,7 @@ label start:
 
     a "Усложним вопрос. Кем вы себя видите в жизни?"
 
-    show julia thinking
+    show julia thinking highlight
     
     u "Ой… Я.. Я даже не знаю, что ответить…"
 
@@ -473,7 +473,7 @@ label start:
 
     "Нависла тишина. Снова."
 
-    show julia ordinary
+    show julia ordinary highlight
 
     u "Я еще с пятого класса хотела творить что-то сама, придумывать, рисовать, писать, создавать в конце концов. Самой. Самой решать, что делать, но как-то не получалось."
 
@@ -481,13 +481,13 @@ label start:
 
     "Кажется, этот вопрос заставил её нехило задуматься. В нынешнее время ты заранее знаешь, какой ответ хочет услышать вопрошающий, и говоришь то, что надо, а не что думаешь сам. Как же это знакомо. Именно так убивают в себе творчество и желание думать самому."
 
-    show julia happy
+    show julia happy highlight
 
     u "Но я все же оптимистка, поэтому поживем-увидим."
 
     a "А что вы скажите по поводу своих умений?"
 
-    show julia ordinary
+    show julia ordinary highlight
 
     u "Когда у меня было свободное время, а это часа три-четыре в неделю, я занималась 3D-моделированием. Вроде получалось, но я никому особо не показывала."
 
@@ -497,10 +497,10 @@ label start:
 
     a "Та-а-а-к, хорошо. Юлиана, верно? Угу. Ну, кто следующий?"
 
-    hide julia ordinary
+    hide julia ordinary highlight
     with dissolve
 
-    show stepan ordinary
+    show stepan ordinary highlight
     with dissolve
 
     s "Ну давай я. Ёмаё, в смысле {i}«давайте»{/i}."
@@ -511,25 +511,25 @@ label start:
 
     a "В каком смысле?"
 
-    show stepan thinking
+    show stepan thinking highlight
     with dissolve
 
     s "Ну не в плохом. Я как бы.. ну не имею высшего образования."
 
     "Интересно. Если он получил приглашение, не имея высшего образование, значит его позвали за другие заслуги…"
 
-    show stepan ordinary
+    show stepan ordinary highlight
 
     s "Ну это… я в школе у себя в мелком городке так-то плохо учился, драки там, гулянки. Но бате все равно было. Он считал, что оценки и остальное – это всё «конкретная такая лабуда», понял, да? За оценки он не возникал, не бил меня."
 
     s "Отроком был, хвостиком за ним бегал, даже школу прогуливал чтобы со стариком своим побыть. А работал он в ремонтном центре, там болтики-винтики крутил. А я палил и на корочку записывал. Потом кое-как девятый закончил значит, поступил в ПТУ и с первого курса начал там «работать»."
 
     s "Преподы постоянно просили меня их компы чинить, потому что они старые, рамсили часто. Не преподы, компы, да…"
-    show stepan happy
+    show stepan happy highlight
     
     s "Автоматы ставили. Главное, чтобы буквальный «автомат» не получить, хе-хе."
 
-    show stepan ordinary
+    show stepan ordinary highlight
 
     s "Ну во-о-т. А дальше с 3 курса я пошел работать в местный магаз электроники. Там у них сайтик с данными был дряхлый. Я помимо работы в зале, одним глазком за сервером смотрел, чтоб не сгорел нафиг… Да-а-а, техника была хреновей некуда…"
 
@@ -541,17 +541,17 @@ label start:
 
     a "Очень интересно, Степан…"
 
-    show stepan happy
+    show stepan happy highlight
 
     "Просто Стёпа, будьте добры."
 
     "Он улыбнулся и почесал затылок. Было видно, пусть он и крепкий характером на вид, но все равно немного волнуется."
 
-    hide stepan happy
+    hide stepan happy highlight
 
     "В аудитории снова стало тихо, пока я записывал имя. Но опять ненадолго. Тишину разорвало высказывание следующего гостя."
 
-    show alex ordinary
+    show alex ordinary highlight
     with dissolve
 
     al "Это конечно мило, но можно уже я начну?"
@@ -566,35 +566,35 @@ label start:
 
     al "Да потому что, как я понял, у меня тут лучше образование. Да и сам я, как понял лучше"
 
-    show alex ordinary:
+    show alex ordinary highlight:
         xalign 0.8
     with move
     
-    show stepan angry:
+    show stepan angry highlight:
         xalign 0.2
     with easeinleft
     s "Ну тогда назовись, че ты тянешь тогда, золотой ты наш?"
 
-    show stepan angry:
+    show stepan angry highlight:
         xalign -0.2
     with move
     hide stepan angry
 
-    show alex ordinary:
+    show alex ordinary highlight:
         xalign 0.5
     with move
 
     a "Меня зовут Алекс, я учился в московском лицее, легко получил медаль, отучился в МГУ, забрал положенный мне диплом. Затем, как ожидалось, мне поступил звонок с приглашением сюда."
     
-    show alex contemptuous
+    show alex contemptuous highlight
 
     al "Честно не знаю, затем я пришёл в это… заведение. Наверное, просто из любопытства, посмотреть, как простой люд живёт. Благо у меня в эту глушь добраться много времени не заняло на своей то машинке."
 
-    show alex contemptuous:
+    show alex contemptuous highlight:
         xalign 0.8
     with move
     
-    show stepan angry:
+    show stepan angry highlight:
         xalign 0.2
     with easeinleft
 
@@ -606,55 +606,55 @@ label start:
 
     a "Так, хватит, не надо тут детский сад разводить, вы же все взрослые люди, ей богу"
 
-    show alex ordinary
+    show alex ordinary highlight
 
-    show stepan ordinary
+    show stepan ordinary highlight
 
     "М-да, несмотря на хороший внешний вид, ведёт он себя как абсолютный невежа. Ещё и срывает наше и так непростое собеседование."
 
 
-    show stepan ordinary:
+    show stepan ordinary highlight:
         xalign -0.2
     with move
-    hide stepan ordinary
+    hide stepan ordinary highlight
 
     a "Эй, как тебя, Юля, не хочешь сегодня покататься?"
 
-    show alex ordinary:
+    show alex ordinary highlight:
         xalign 0.8
     with move
 
-    show julia ordinary:
+    show julia ordinary highlight:
         xalign 0.2
     with easeinleft
 
     u "Воздержусь, пожалуй."
 
-    show julia ordinary:
+    show julia ordinary highlight:
         xalign -0.2
     with move
-    hide julia ordinary
+    hide julia ordinary highlight
 
     a "Александр, по делу, давайте закончим."
 
     al "Алекс вообще-то."
 
-    show alex ordinary:
+    show alex ordinary highlight:
         xalign 0.8
     with move
     
-    show stepan ordinary:
+    show stepan ordinary highlight:
         xalign 0.2
     with easeinleft
 
     s "Да не важно."
 
-    show stepan ordinary:
+    show stepan ordinary highlight:
         xalign -0.2
     with move
-    hide stepan ordinary
+    hide stepan ordinary highlight
 
-    show alex ordinary:
+    show alex ordinary highlight:
         xalign 0.5
     with move
 
@@ -670,12 +670,12 @@ label start:
 
     a "Так, Алекс, все записал. Вроде бы всех послу…"
 
-    show alex ordinary:
+    show alex ordinary highlight:
         xalign -0.2
     with move
-    hide alex ordinary
+    hide alex ordinary highlight
 
-    show pavel ordinary:
+    show pavel ordinary highlight:
         xalign 0.8
     with easeinright
 
@@ -689,44 +689,44 @@ label start:
 
     p "П-павел. Я у-учился на дому, потому что я оч-чень болезненный, даже сейчас я… я…."
 
-    show pavel covered face
+    show pavel covered face highlight
 
     play sound sneeze fadeout 1.0 fadein 1.0
 
-    show julia ordinary:
+    show julia ordinary highlight:
         xalign 0.2
     with easeinleft
 
     u "Будь здоров."
 
-    show julia ordinary:
+    show julia ordinary highlight:
         xalign -0.2
     with move
-    hide julia ordinary
+    hide julia ordinary highlight
 
-    show stepan ordinary:
+    show stepan ordinary highlight:
         xalign 0.2
     with easeinleft
 
     s "Расти большой."
 
-    show stepan ordinary:
+    show stepan ordinary highlight:
         xalign -0.2
     with move
-    hide stepan ordinary
+    hide stepan ordinary highlight
 
-    show alex ordinary:
+    show alex ordinary highlight:
         xalign 0.2
     with easeinleft
 
     al "Не делай так больше."
 
-    show alex ordinary:
+    show alex ordinary highlight:
         xalign -0.2
     with move
-    hide alex ordinary
+    hide alex ordinary highlight
 
-    show pavel ordinary:
+    show pavel ordinary highlight:
         xalign 0.5
     with move
 
@@ -746,23 +746,27 @@ label start:
 
     a "А что вы думаете по поводу работы в коллективе?"
 
-    show pavel thinking
+    show pavel thinking highlight
 
     p "Н-ну я особо кроме мамы ни с кем не общался, я и одноклассников то толком не помню если честно. А, еще я на дваче там сидел бывало."
 
-    show pavel screwed up:
+    show pavel screwed up highlight:
         xalign 0.8
     with move
 
-    show stepan happy:
+    show stepan happy highlight:
         xalign 0.7
     with easeinright
+
+    hide pavel screwed up highlight
+    show pavel screwed up highlight:
+        xalign 0.8
 
     s "Не парься, Пахан, все нормально будет!"
 
     "Стёпа по-братски хлопнул Пашу по плечу так, что тот чуть не сложился пополам."
 
-    show stepan ordinary
+    show stepan ordinary highlight
 
     s "Блин, прости, не больно?"
 
@@ -770,15 +774,23 @@ label start:
 
     play sound laugh fadeout 1.0 fadein 1.0
 
-    show alex ordinary:
+    show alex ordinary highlight:
         xalign 0.2
     with easeinleft
 
     al "Если ты такой нелюдимый, зачем сюда пришёл тогда? Так бы и сидел дома, на дваче бы жил да «ботиков» своих писал."
 
-    show julia ordinary:
+    show julia ordinary highlight:
         xalign 0.6
     with easeinright
+
+    hide stepan happy highlight
+    show stepan happy highlight:
+        xalign 0.7
+
+    hide pavel screwed up highlight
+    show pavel screwed up highlight:
+        xalign 0.8
 
     u "Отстань от него, он человек получше тебя будет, уж точно."
 
@@ -788,22 +800,22 @@ label start:
 
     a "Нет, что вы? В наше время у всех есть свои… проблемы. Как я понял, вам лучше работать из дому?"
 
-    show alex ordinary:
+    show alex ordinary highlight:
         xalign -0.2
     with move
     hide alex ordinary
 
-    show stepan happy:
+    show stepan happy highlight:
         xalign 1.2
     with move
-    hide stepan happy
+    hide stepan happy highlight
 
-    show julia ordinary:
+    show julia ordinary highlight:
         xalign 1.2
     with move
-    hide julia ordinary
+    hide julia ordinary highlight
 
-    show pavel ordinary:
+    show pavel ordinary highlight:
         xalign 0.5
     with move
 
@@ -811,36 +823,44 @@ label start:
 
     "Этот парень чем-то напоминает меня. Я тоже особо не люблю громкие вечеринки, но до такого я пытался себя не запускать. Но если он готов пойти на такие жертвы, ради личностного роста, это довольно сильный поступок. Таким людям все рады."
 
-    hide pavel ordinary
+    hide pavel ordinary highlight
     with dissolve
 
     a "Та-а-к.. ну вот, мы все познакомились."
 
-    show julia happy:
+    show julia happy highlight:
         xalign 0.2
     with easeinleft
 
     u "Я так рада, что мне удалось сегодня прийти, если честно. Я так устала дома сидеть, хоть с кем-то познакомилась"
 
-    show stepan happy:
+    show stepan happy highlight:
         xalign 0.8
     with easeinright
 
     s "А то, глядишь сработаемся, и все чётко будет, да?"
 
-    show alex ordinary:
+    show alex ordinary highlight:
         xalign 0.3
     with easeinleft
 
+    hide julia happy highlight
+    show julia happy highlight:
+        xalign 0.2
+
     al "Да что вы…"
 
-    show stepan angry
+    show stepan angry highlight
 
     s "Тебя это не касается, понял?"
 
-    show pavel ordinary:
+    show pavel ordinary highlight:
         xalign 0.7
     with easeinright
+
+    hide stepan angry highlight
+    show stepan angry highlight:
+        xalign 0.8
 
     p "Р-ребята, не надо."
 
@@ -848,36 +868,36 @@ label start:
 
     "Ну насколько я знаю."
 
-    show julia happy:
+    show julia happy highlight:
         xalign -0.2
     with move
-    hide julia happy
+    hide julia happy highlight
 
-    show stepan happy:
+    show stepan happy highlight:
         xalign 1.2
     with move
-    hide stepan happy
+    hide stepan happy highlight
 
-    show alex ordinary:
+    show alex ordinary highlight:
         xalign -0.2
     with move
-    hide alex ordinary
+    hide alex ordinary highlight
 
-    show pavel ordinary:
+    show pavel ordinary highlight:
         xalign 1.2
     with move
-    hide pavel ordinary
+    hide pavel ordinary highlight
 
     a "Так, мне нужно выйти позвонить, особо не хулиганьте."
 
-    show stepan ordinary
+    show stepan ordinary highlight
     with dissolve
     
     s "Да не парься, начальник, всё ок будет."
 
     a "Я вам не начальник, я просто провожу экскурс."
 
-    show julia happy:
+    show julia happy highlight:
         xalign 0.2
     with easeinleft 
 
@@ -885,7 +905,7 @@ label start:
 
     "Она улыбнулась."
 
-    show pavel ordinary:
+    show pavel ordinary highlight:
         xalign 0.7
     with easeinright
 
@@ -897,17 +917,17 @@ label start:
 
     p "С-спасибо, наверное…"
 
-    show julia happy:
+    show julia happy highlight:
         xalign -0.2
     with move
-    hide julia happy
+    hide julia happy highlight
 
-    show pavel ordinary:
+    show pavel ordinary highlight:
         xalign 1.2
     with move
-    hide pavel ordinary
+    hide pavel ordinary highlight
 
-    hide stepan ordinary
+    hide stepan ordinary highlight
     with dissolve
 
     scene bg phone conversation

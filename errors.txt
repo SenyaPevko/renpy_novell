@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 761: expected statement.
-    renpy.show( pavel screwed up)
-                                 ^
+File "game/script.rpy", line 680: end of line expected.
+    with easeinright highlight
+                     ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Dec 20 20:30:22 2022
+Tue Dec 20 20:41:15 2022
