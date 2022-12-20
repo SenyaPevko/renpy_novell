@@ -6,21 +6,23 @@ init python:
     g.locked_button = "images/gallery/lock.jpg"
 
     # Добавляем кнопку и задаём ей название.
-
     g.button("ending1")
 
     # Условие, при котором кнопка активируется.
-
     g.condition("persistent.ending1")
 
-    # картинка, который отображается при нажатии на кнопку.
-
+    # картинка, которая отображается при нажатии на кнопку.
     g.image("chapter1")
 
     # глава 2
     g.button("ending2")
     g.condition("persistent.ending2")
     g.image("chapter2")
+
+    # глава 3
+    g.button("ending3")
+    g.condition("persistent.ending3")
+    g.image("chapter3")
 
 init:
     #музыка главного меню

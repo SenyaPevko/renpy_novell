@@ -1550,8 +1550,8 @@ screen gallery():
         yfill True
         add g.make_button("ending1", "preview1", xalign = 0.5, yalign = 0.5, hover_border = "images/gallery/hover.png")
         add g.make_button("ending2", "preview2", xalign = 0.5, yalign = 0.5, hover_border = "images/gallery/hover.png")
+        add g.make_button("ending3", "preview3", xalign = 0.5, yalign = 0.5, hover_border = "images/gallery/hover.png")
 
-        null
         null
         null
 
