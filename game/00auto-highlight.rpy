@@ -29,9 +29,9 @@ init -10 python:
             if char_name not in sprite_focus:
                 sprite_focus[char_name] = False
             anim_length = 0.2
-            bright_change = 0.08
+            bright_change = 0.1
             sat_change = 0.2
-            zoom_change = 0.0025
+            zoom_change = 0.0045
             y_change = 1
 
             is_talking = speaking_char == char_name

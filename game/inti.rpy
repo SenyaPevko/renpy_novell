@@ -24,6 +24,11 @@ init python:
     g.condition("persistent.ending3")
     g.image("chapter3")
 
+    # глава 4
+    g.button("ending4")
+    g.condition("persistent.ending4")
+    g.image("chapter4")
+
 init:
     #музыка главного меню
     define main_menu = "/audio/music/main_menu.mp3"

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 680: end of line expected.
-    with easeinright highlight
-                     ^
+File "game/script.rpy", line 19: invalid syntax
+    = At("alex contemptuous", sprite_highlight("alex"))
+     ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Dec 20 20:41:15 2022
+Sat Dec 31 11:00:09 2022

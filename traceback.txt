@@ -1,42 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 215, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 517, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 517, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
-    renpy.load(renpy.session["_reload_slot"])
-AttributeError: Can't get attribute 'SetColor' on <renpy.python.StoreModule object at 0x0000000004312700>
+  File "game/script.rpy", line 446, in script
+    show julia happy highlight:
+Exception: Image 'julia happy' does not accept attributes 'highlight'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00start.rpy", line 215, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 517, in script
-    python hide:
-  File "D:\renpy-8.0.3-sdk\renpy\renpy\ast.py", line 1131, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "D:\renpy-8.0.3-sdk\renpy\renpy\python.py", line 1061, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00keymap.rpy", line 517, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
-    renpy.load(renpy.session["_reload_slot"])
-  File "D:\renpy-8.0.3-sdk\renpy\renpy\loadsave.py", line 768, in load
-    roots, log = loads(location.load(filename))
-  File "D:\renpy-8.0.3-sdk\renpy\renpy\compat\pickle.py", line 100, in loads
-    return load(io.BytesIO(s))
-  File "D:\renpy-8.0.3-sdk\renpy\renpy\compat\pickle.py", line 97, in load
-    return up.load()
-  File "D:\renpy-8.0.3-sdk\renpy\renpy\compat\pickle.py", line 93, in find_class
-    return super().find_class(module, name)
-AttributeError: Can't get attribute 'SetColor' on <renpy.python.StoreModule object at 0x0000000004312700>
+  File "game/script.rpy", line 446, in script
+    show julia happy highlight:
+  File "D:\renpy-8.0.3-sdk\renpy\renpy\ast.py", line 1408, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "D:\renpy-8.0.3-sdk\renpy\renpy\ast.py", line 1371, in show_imspec
+    renpy.config.show(name,
+  File "D:\renpy-8.0.3-sdk\renpy\renpy\exports.py", line 686, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "D:\renpy-8.0.3-sdk\renpy\renpy\display\image.py", line 414, in find_target
+    self.target = target._duplicate(a)
+  File "D:\renpy-8.0.3-sdk\renpy\renpy\display\core.py", line 397, in _duplicate
+    args.extraneous()
+  File "D:\renpy-8.0.3-sdk\renpy\renpy\display\core.py", line 265, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'julia happy' does not accept attributes 'highlight'.
 
 Windows-10-10.0.22000 AMD64
 Ren'Py 8.0.3.22090809
 Capybara 1.0
-Tue Dec 20 20:59:29 2022
+Sat Dec 31 15:24:55 2022

@@ -159,6 +159,7 @@ style say_dialogue:
     xpos gui.dialogue_xpos
     xsize gui.dialogue_width
     ypos gui.dialogue_ypos
+    yoffset 1
 
     adjust_spacing False
 
@@ -241,7 +242,8 @@ style choice_button is default:
     activate_sound "audio/sounds/menu_button.wav"
 
 style choice_button_text is default:
-    properties gui.button_text_properties("choice_button")
+    properties gui.button_text_properties("choice_button")  
+    outlines [(3, "#000", 0, 0)]
 
 
 ## Экран быстрого меню #########################################################
@@ -304,18 +306,16 @@ screen navigation():
         style_prefix "navigation"
         
         if renpy.get_screen("main_menu"):
-
             xalign 0.5
             xoffset 10
             yalign 0.55
             yoffset 120
         
         else:
-
+            
             xoffset 60
             yalign 0.5
-
-
+            
         spacing gui.navigation_spacing
 
         if main_menu:
@@ -332,7 +332,7 @@ screen navigation():
 
         textbutton _("Альбом") action ShowMenu("gallery")
 
-        textbutton _("Настройки") action ShowMenu("preferences")
+        textbutton _("Опции") action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -340,7 +340,7 @@ screen navigation():
 
         elif not main_menu:
 
-            textbutton _("Главное меню") action MainMenu()
+            textbutton _("В меню") action MainMenu()
 
         textbutton _("Об игре") action ShowMenu("about")
 
@@ -453,6 +453,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
         add gui.main_menu_background
     else:
         add gui.game_menu_background
+
 
     frame:
         style "game_menu_outer_frame"
@@ -1551,10 +1552,8 @@ screen gallery():
         add g.make_button("ending1", "preview1", xalign = 0.5, yalign = 0.5, hover_border = "images/gallery/hover.png")
         add g.make_button("ending2", "preview2", xalign = 0.5, yalign = 0.5, hover_border = "images/gallery/hover.png")
         add g.make_button("ending3", "preview3", xalign = 0.5, yalign = 0.5, hover_border = "images/gallery/hover.png")
-
+        add g.make_button("ending4", "preview4", xalign = 0.5, yalign = 0, hover_border = "images/gallery/hover.png")
         null
-        null
-
         textbutton "Вернуться" text_color "#aaaaaa" text_hover_color "#222222" action Return() xalign 0.5 yalign 0.95
 
 style scrollbar_blue is scrollbar:
